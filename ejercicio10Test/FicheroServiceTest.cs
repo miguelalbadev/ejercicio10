@@ -9,7 +9,8 @@ namespace ejercicio10Test {
         [TestMethod]
         public void TestGuardaNumero() {
 
-            FicheroService.GuardarNumero(5);
+            FicheroService sut = new FicheroService();
+            sut.GuardarNumero(5);
             Assert.IsTrue(FicheroUtil.IsLlamado());
         }
     }
